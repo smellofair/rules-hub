@@ -12,3 +12,4 @@ jobs:
         uses: cephalofair/rules-actions/hub-update@v0.2
         with:
           source: ${{ github.event.client_payload.source }}
+          pat: ${{ secrets.PAT }}
