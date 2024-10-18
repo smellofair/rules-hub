@@ -1,0 +1,12 @@
+name: "Hub Update"
+
+on:
+  repository_dispatch:
+    types: ["hub-update"]
+
+jobs:
+  steps:
+    - name: "Hub Update"
+      uses: cephalofair/rules-actions/hub-update@v0.2
+      with:
+        ref: ${{ github.event.client_payload.sha }}
