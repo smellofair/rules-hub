@@ -11,4 +11,4 @@ jobs:
       - name: "Hub Update"
         uses: cephalofair/rules-actions/hub-update@v0.2
         with:
-          ref: ${{ github.event.client_payload.sha }}
+          source: ${{ github.event.client_payload.source }}
