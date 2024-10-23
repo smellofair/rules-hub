@@ -12,4 +12,4 @@ jobs:
       - name: "Build Hub"
         uses: cephalofair/rules-actions/build-hub@v0.3
         with:
-          path: ${{ secrets.PAT }}
+          pat: ${{ secrets.PAT }}
