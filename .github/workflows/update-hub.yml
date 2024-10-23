@@ -1,15 +1,15 @@
-name: "Hub Update"
+name: "Update Hub"
 
 on:
   repository_dispatch:
-    types: ["hub-update"]
+    types: ["update-hub"]
 
 jobs:
-  Hub-Update:
+  Update-Hub:
     runs-on: ubuntu-latest
     steps:
-      - name: "Hub Update"
-        uses: cephalofair/rules-actions/hub-update@v0.2
+      - name: "Update Hub"
+        uses: cephalofair/rules-actions/update-hub@v0.3
         with:
           source: ${{ github.event.client_payload.source }}
           pat: ${{ secrets.PAT }}

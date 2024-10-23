@@ -1,0 +1,15 @@
+name: "Build Hub"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Build-Hub:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Build Hub"
+        uses: cephalofair/rules-actions/hub-build@v0.3
+        with:
+          path: ${{ secrets.PAT }}
