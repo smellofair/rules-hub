@@ -1,7 +1,7 @@
 # pwd
 `/home/runner/work/rules-hub/rules-hub`
 # tree
-```\r\n.
+```
 ├── README.md
 └── translations
     └── en
@@ -46,4 +46,5 @@
         │       └── rules.md
         └── index.md
 
-22 directories, 21 files\r\n```
+22 directories, 21 files
+```
