@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Build Hub"
-        uses: cephalofair/rules-actions/build-hub@v0.3
+        uses: ${{ vars.ACTIONS_REPO }}/build-hub@v0.3
         with:
           pat: ${{ secrets.PAT }}

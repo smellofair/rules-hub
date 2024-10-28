@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Update Hub"
-        uses: cephalofair/rules-actions/update-hub@v0.3
+        uses: ${{ vars.ACTIONS_REPO }}/update-hub@v0.3
         with:
           source: ${{ github.event.client_payload.source }}
           pat: ${{ secrets.PAT }}
