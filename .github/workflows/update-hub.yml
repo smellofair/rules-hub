@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Update Hub"
-        uses: ${{ vars.ACTIONS_REPO }}/update-hub@v0.3
+        uses: smellofair/rules-actions/update-hub@v0.3
         with:
           source: ${{ github.event.client_payload.source }}
+          author: ${{ github.event.client_payload.author }}
+          commit: ${{ github.event.client_payload.commit }}
           pat: ${{ secrets.PAT }}
