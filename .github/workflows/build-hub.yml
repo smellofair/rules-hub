@@ -9,6 +9,7 @@ jobs:
   Build-Hub:
     permissions:
       id-token: write
+      pages: write
     runs-on: ubuntu-latest
     steps:
       - name: "Build Hub"
