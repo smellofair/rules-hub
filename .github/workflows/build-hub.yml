@@ -7,6 +7,8 @@ on:
 
 jobs:
   Build-Hub:
+    permissions:
+      id-token: write
     runs-on: ubuntu-latest
     steps:
       - name: "Build Hub"
