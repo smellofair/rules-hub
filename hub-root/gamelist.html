@@ -1,77 +1,7 @@
 <!doctype html5>
 <html>
     <head>
-        <title>Smell-of-Air Rules Hub</title>
-        <script type="text/javascript">
-            let getLanguage = () => {
-                let nav = window.navigator;
-                if (Array.isArray(nav.languages)) {
-                    for (let _lang of nav.languages) {
-                        if (_lang && _lang.length) {
-                            return _lang;
-                        }
-                    }
-                }
-
-                const keys = ["language", "browserLanguage", "systemLanguage", "userLanguage"];
-                for (let i = 0; i < keys.length; i++) {
-                    let _lang = nav[keys[i]];
-                    if (_lang && _lang.length) {
-                        return _lang;
-                    }
-                }
-
-                return null;
-            };
-
-            let generateUrl = (suffix) => {
-                const loc = window.location;
-                const host = loc.host;
-                let path = loc.pathname;
-                const proto = loc.protocol;
-                const port = loc.port ? `:${loc.port}` : "";
-
-                if (path.endsWith(".html")) {
-                    let parts = path.split("/");
-                    parts.pop();
-                    path = parts.join("/");
-                }
-
-                return `${proto}//${host}${port}/${path}/${suffix}`;
-            }
-
-            let doRedirect = () => {
-                const userLanguage = getLanguage();
-                if (!userLanguage) {
-                    return;
-                }
-
-                const langPrefix = userLanguage.split("-")[0];
-
-                const availableLanguages = ["en"]; // REPLACE:LANGUAGES
-
-                let chosenLanguage = null;
-
-                if (availableLanguages.includes(userLanguage)) {
-                    chosenLanguage = userLanguage;
-                    console.log("Your language is " + userLanguage);
-                } else if (availableLanguages.includes(langPrefix)) {
-                    chosenLanguage = langPrefix;
-                    console.log("Your backup language is " + langPrefix);
-                }
-
-                if (!chosenLanguage) {
-                    return;
-                }
-
-                const url = generateUrl(chosenLanguage);
-                console.log("Redirecting to: " + url);
-
-                window.location = url;
-            }
-
-            doRedirect();
-        </script>
+        <title>Smell-of-Air Rules Language Hub</title>
     </head>
     <body>
         <!-- REPLACE:HEADER -->
@@ -80,10 +10,9 @@
         </noscript>
 
         <div>
-            <p>Your language was not automatically detected.</p>
+            <p>This would be a language's main page - need to list games and stuff here.</p>
+        </div>
 
-            <p>Please choose from one of the available languages:</p>
-            <!-- REPLACE:LANGLIST -->
         <!-- REPLACE:FOOTER -->
     </body>
 </html>
