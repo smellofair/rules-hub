@@ -1,3 +1,6 @@
+# repo status
+[![Build Hub](https://github.com/smellofair/rules-hub/actions/workflows/build-hub.yml/badge.svg?branch=main)](https://github.com/smellofair/rules-hub/actions/workflows/build-hub.yml)
+
 # next steps
 
 ## todo
