@@ -1,0 +1,8 @@
+translations:
+  - name: rules-lang-en
+    languages:
+      - name: en-wacky
+        games: all
+      - name: en
+        games:
+          - fh
