@@ -1,0 +1,3 @@
+[submodule "translations/rules-lang-en"]
+	path = translations/rules-lang-en
+	url = https://github.com/smellofair/rules-lang-en.git
