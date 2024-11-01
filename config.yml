@@ -1,8 +1,24 @@
 translations:
-  - name: rules-lang-en
+  # first list the repos
+  - repo: rules-lang-en
     languages:
-      - name: en-wacky
+      # then for each language
+        # specify the 'language-code'
+      - code: en
+        # and the applicable games
         games: all
-      - name: en
+      - code: es-pe
+        games:
+          - fog
+  - repo: some-other-rules-repo
+    languages:
+      - code: es
         games:
           - fh
+          - jotl
+  - repo: another-sample-repo
+    languages:
+      - code: fr
+        games:
+          - gh2
+          - fw
